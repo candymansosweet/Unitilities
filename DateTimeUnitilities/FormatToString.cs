@@ -34,6 +34,13 @@ public class FormatToString
 
         return formattedDate;
     }
+    static public string[] FormatToPathDeep(string format)
+    {
+        // Chuyển đổi DateTime sang chuỗi theo format "dd/MM/yyyy"
+        string formattedDate = DateTime.UtcNow.Date.ToString(format);
+
+        return formattedDate.Split('/');
+    }
 }
 
 
